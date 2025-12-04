@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide Viewer</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    #slide {
+        border: 2px solid #ccc;
+        padding: 40px;
+        margin-bottom: 20px;
+        min-height: 200px;
+        font-size: 1.4em;
+        text-align: center;
+        background: #f9f9f9;
+    }
+
+    #info {
+        padding: 20px;
+        background: #eef7ff;
+        border-left: 4px solid #4a90e2;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Study Slides</h1>
+
+<div id="slide"></div>
+<div id="info"></div>
+
+<div class="buttons">
+    <button onclick="prevSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+    const slides = [
+        {
+            content: "Slide 1 — Introduction",
+            info: "This is the introductory slide. You can add definitions, explanations, or notes here."
+        },
+        {
+            content: "Slide 2 — Key Concept",
+            info: "Explain the concept in detail here so students can study it."
+        },
+        {
+            content: "Slide 3 — Example Problem",
+            info: "Place step-by-step explanations or answers here."
+        }
+    ];
+
+    let index = 0;
+
+    function showSlide() {
+        document.getElementById('slide').innerHTML = slides[index].content;
+        document.getElementById('info').innerHTML = slides[index].info;
+    }
+
+    function nextSlide() {
+        if (index < slides.length - 1) index++;
+        showSlide();
+    }
+
+    function prevSlide() {
+        if (index > 0) index--;
+        showSlide();
+    }
+
+    showSlide();
+</script>
+
+</body>
+</html>
