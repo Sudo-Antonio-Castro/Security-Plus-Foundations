@@ -50,8 +50,8 @@
 <script>
     const slides = [
         {
-            content: "<h2>Core Security Concepts</h2>",
-            info: "Welcome! This deck covers essential Security+ concepts."
+            content: "<h2>CompTIA Security+ SY0-701</h2>",
+            info: "Compact Study"
         },
 {
     content: "<h2>Core Security Concepts</h2>" +
@@ -97,47 +97,313 @@
           "Continuous validation – Keep checking people, devices, and actions nonstop. No freebies."
 },
         {
-    content: "<h2>Core Security Concepts</h2>" +
+    content: "<h2>Common Threats and Attacks</h2>" +
              "<ul>" +
-             "<li><strong>CIA:</strong> Confidentiality, Integrity, Availability</li>" +
-             "<li><strong>AAA:</strong> Identification, Authentication, Authorization, Accounting</li>" +
-             "<li><strong>Control types:</strong> Technical, Operational, Managerial</li>" +
-             "<li><strong>Control function:</strong> Preventive, Detective, Corrective, Deterrent, Compensating</li>" +
-             "<li><strong>Frameworks & baselines:</strong> NIST, ISO; policies, standards, procedures</li>" +
-             "<li><strong>Zero trust:</strong> Never trust, always verify; continuous validation</li>" +
+             "<li><strong>Threat actors:</strong> script kiddies, insiders, cybercrime groups, hacktivists, nation-states</li>" +
+             "<li><strong>Social engineering:</strong> phishing, spear phishing, whale phishing, vishing, smishing, tailgating</li>" +
+             "<li><strong>Malware:</strong> viruses, worms, Trojans, ransomware, spyware/adware, rootkits</li>" +
+             "<li><strong>Network attacks:</strong> DoS/DDoS, MITM, spoofing, replay attacks, ARP/DNS poisoning</li>" +
+             "<li><strong>Application attacks:</strong> SQL/command injection, XSS, CSRF, directory traversal</li>" +
+             "<li><strong>Password attacks:</strong> brute force, dictionary, credential stuffing, spraying</li>" +
              "</ul>",
-    info: "<strong>CIA Triad (Confidentiality, Integrity, Availability)</strong><br>" +
-          "Confidentiality – Keep secrets secret. Only the right people should see the info.<br>" +
-          "Integrity – Keep info correct. No sneaky changes.<br>" +
-          "Availability – Keep it working. Info and systems should be ready when needed.<br><br>" +
+info: "<strong>Threat Actors</strong><br>" +
+      "Script kiddies – People who use existing tools to hack, usually for fun.<br>" +
+      "Insiders – Employees or people inside the organization causing problems.<br>" +
+      "Cybercrime groups – Organized criminals doing hacking for money.<br>" +
+      "Hacktivists – People hacking for political or social causes.<br>" +
+      "Nation-states – Government-sponsored hackers targeting other countries.<br><br>" +
 
-          "<strong>AAA</strong><br>" +
-          "Identification (Prerequisite) – “Who are you?” (You tell the system your name/ID.)<br>" +
-          "Authentication – “Prove it.” (Show password, fingerprint, token, etc.)<br>" +
-          "Authorization – “What can you do?” (Your allowed actions or access.)<br>" +
-          "Accounting – “What did you do?” (Logs that track actions.)<br><br>" +
+      "<strong>Social Engineering</strong><br>" +
+      "Phishing – Fake emails to trick you into giving info.<br>" +
+      "Spear phishing – Targeted phishing aimed at specific people.<br>" +
+      "Whale phishing – Phishing aimed at big important targets (like executives).<br>" +
+      "Vishing – Phone calls trying to trick you.<br>" +
+      "Smishing – Text messages trying to trick you.<br>" +
+      "Tailgating – Following someone into a secure area without permission.<br><br>" +
 
-          "<strong>Control Types</strong><br>" +
-          "Technical – Computer stuff (firewalls, passwords, encryption).<br>" +
-          "Operational – People doing things (training, guards, procedures).<br>" +
-          "Managerial – Paperwork and planning (risk assessments, policies).<br><br>" +
+      "<strong>Malware</strong><br>" +
+      "Viruses – Programs that attach to files and spread.<br>" +
+      "Worms – Programs that spread by themselves across networks.<br>" +
+      "Trojans – Malware disguised as something harmless.<br>" +
+      "Ransomware – Locks your files and asks for money.<br>" +
+      "Spyware/Adware – Tracks what you do or shows annoying ads.<br>" +
+      "Rootkits – Hide malware and give attackers control.<br><br>" +
 
-          "<strong>Control Functions</strong><br>" +
-          "Preventive – Stop bad things before they happen (locks, firewalls).<br>" +
-          "Detective – Notice bad things happening (alarms, logs).<br>" +
-          "Corrective – Fix things after they happen (patches, backups).<br>" +
-          "Deterrent – Scare bad guys away (warning signs, cameras).<br>" +
-          "Compensating – Backup plan when the main control isn’t available.<br><br>" +
+      "<strong>Network Attacks</strong><br>" +
+      "DoS/DDoS – Overload a system to make it stop working.<br>" +
+      "MITM – Intercepting communication between two parties.<br>" +
+      "Spoofing – Pretending to be someone/something else.<br>" +
+      "Replay attacks – Repeating valid data to trick a system.<br>" +
+      "ARP/DNS poisoning – Messing with network routing or name resolution.<br><br>" +
 
-          "<strong>Frameworks, Baselines, and Documentation</strong><br>" +
-          "NIST, ISO – Official “rulebooks” that say what good security looks like.<br>" +
-          "Policies – Big-picture rules (“We must keep data secure”).<br>" +
-          "Standards – More specific rules (“Use strong passwords”).<br>" +
-          "Procedures – Step-by-step instructions (“Click here, then here, then reset password”).<br><br>" +
+      "<strong>Application Attacks</strong><br>" +
+      "SQL/Command Injection – Inserting bad commands into apps.<br>" +
+      "XSS – Inserting bad scripts into websites.<br>" +
+      "CSRF – Trick users into doing things they didn’t mean to.<br>" +
+      "Directory Traversal – Accessing files that shouldn’t be accessible.<br><br>" +
 
-          "<strong>Zero Trust</strong><br>" +
-          "Never trust, always verify – Everyone must prove who they are, every time.<br>" +
-          "Continuous validation – Keep checking people, devices, and actions nonstop. No freebies."
+      "<strong>Password Attacks</strong><br>" +
+      "Brute force – Trying every possible password.<br>" +
+      "Dictionary – Trying common words as passwords.<br>" +
+      "Credential stuffing – Using stolen passwords from other sites.<br>" +
+      "Spraying – Trying a few common passwords on many accounts."
+},
+                {
+    content: "<h2>Architecture & Design</h2>" +
+             "<ul>" +
+             "<li><strong>Segmentation:</strong> VLANs, DMZs, air gaps, OT/ICS separation</li>" +
+             "<li><strong>Secure topologies:</strong> screened subnets, load balancers, reverse proxies, WAF</li>" +
+             "<li><strong>Zones:</strong> production vs dev/test, on-prem vs cloud, guest networks</li>" +
+             "<li><strong>Defense-in-depth:</strong> perimeter, network, host, app, data, user, physical</li>" +
+             "<li><strong>Secure configuration:</strong> baselines, hardening, patching, secure defaults</li>" +
+             "<li><strong>Resilience:</strong> redundancy, clustering, failover, backups, RTO/RPO</li>" +
+             "</ul>",
+    info: "<strong>Segmentation</strong><br>" +
+          "VLANs – Separate network segments logically.<br>" +
+          "DMZs – Separate public-facing systems from internal networks.<br>" +
+          "Air gaps – Physically isolate critical systems from the network.<br>" +
+          "OT/ICS separation – Keep operational technology separate from IT networks.<br><br>" +
+
+          "<strong>Secure Topologies</strong><br>" +
+          "Screened subnets – Firewalls between network zones.<br>" +
+          "Load balancers – Distribute traffic for performance and security.<br>" +
+          "Reverse proxies – Hide internal servers from external users.<br>" +
+          "WAF – Web Application Firewall protects against attacks.<br><br>" +
+
+          "<strong>Zones</strong><br>" +
+          "Prod vs dev/test – Keep production separate from testing.<br>" +
+          "On-prem vs cloud – Separate local and cloud resources.<br>" +
+          "Guest networks – Isolate visitors from sensitive systems.<br><br>" +
+
+          "<strong>Defense-in-Depth</strong><br>" +
+          "Layered security at multiple levels: perimeter, network, host, application, data, user, physical.<br><br>" +
+
+          "<strong>Secure Configuration</strong><br>" +
+          "Baselines – Standard secure settings for systems.<br>" +
+          "Hardening – Remove unnecessary features to reduce risk.<br>" +
+          "Patching – Keep software up to date.<br>" +
+          "Secure defaults – Use safe settings out of the box.<br><br>" +
+
+          "<strong>Resilience</strong><br>" +
+          "Redundancy – Backup systems in case one fails.<br>" +
+          "Clustering – Multiple systems work together for reliability.<br>" +
+          "Failover – Automatically switch to backup systems.<br>" +
+          "Backups – Keep copies of important data.<br>" +
+          "RTO/RPO – Recovery Time Objective / Recovery Point Objective: plan how quickly and how much data you can recover."
+},
+                {
+    content: "<h2>Network & Endpoint Implementation</h2>" +
+             "<ul>" +
+             "<li><strong>Devices:</strong> firewalls (stateful, NGFW), IDS/IPS, NAC, VPN concentrators</li>" +
+             "<li><strong>Filtering:</strong> ACLs, port rules, application-aware filtering, URL filtering</li>" +
+             "<li><strong>VPN:</strong> site-to-site vs remote; IPSec, TLS VPN, always-on VPN</li>" +
+             "<li><strong>Secure protocols:</strong> HTTPS, SSH, SFTP/FTPS, SNMPv3, LDAPS, DNSSEC</li>" +
+             "<li><strong>Avoid clear-text:</strong> HTTP, Telnet, FTP, older unsafe protocols</li>" +
+             "<li><strong>Endpoint security:</strong> EDR/XDR, host firewalls, anti-malware, disk encryption</li>" +
+             "</ul>",
+    info: "<strong>Devices</strong><br>" +
+          "Firewalls – Control network traffic; stateful tracks connections, NGFW adds advanced features.<br>" +
+          "IDS/IPS – Detect and prevent intrusions.<br>" +
+          "NAC – Network Access Control ensures only trusted devices connect.<br>" +
+          "VPN concentrators – Manage multiple VPN connections.<br><br>" +
+
+          "<strong>Filtering</strong><br>" +
+          "ACLs – Access control lists to allow or block traffic.<br>" +
+          "Port rules – Open or block specific ports.<br>" +
+          "Application-aware filtering – Controls traffic by application type.<br>" +
+          "URL filtering – Blocks unsafe or unwanted websites.<br><br>" +
+
+          "<strong>VPN</strong><br>" +
+          "Site-to-site – Connects two networks securely.<br>" +
+          "Remote VPN – Allows individual users to connect securely.<br>" +
+          "IPSec, TLS VPN – Different secure protocols for encryption.<br>" +
+          "Always-on VPN – VPN automatically active to protect traffic.<br><br>" +
+
+          "<strong>Secure Protocols</strong><br>" +
+          "HTTPS – Secure web traffic.<br>" +
+          "SSH – Secure remote command line access.<br>" +
+          "SFTP/FTPS – Secure file transfer.<br>" +
+          "SNMPv3 – Secure network device management.<br>" +
+          "LDAPS – Secure directory access.<br>" +
+          "DNSSEC – Secures domain name lookups.<br><br>" +
+
+          "<strong>Avoid Clear-Text Protocols</strong><br>" +
+          "HTTP, Telnet, FTP – Transmit data unencrypted, avoid using.<br>" +
+          "Older unsafe protocols – Replace with modern secure alternatives.<br><br>" +
+
+          "<strong>Endpoint Security</strong><br>" +
+          "EDR/XDR – Detect and respond to threats on endpoints.<br>" +
+          "Host firewalls – Block unwanted network traffic on devices.<br>" +
+          "Anti-malware – Protect against viruses and malware.<br>" +
+          "Disk encryption – Protect data if a device is lost or stolen."
+},
+                {
+    content: "<h2>Identity, Access, & Auth</h2>" +
+             "<ul>" +
+             "<li><strong>Auth factors:</strong> know, have, are, where, what you do; use MFA</li>" +
+             "<li><strong>Identity stores:</strong> AD/LDAP, SSO, federation (SAML, OIDC, OAuth)</li>" +
+             "<li><strong>Access models:</strong> RBAC, ABAC, MAC, DAC; least privilege, need-to-know</li>" +
+             "<li><strong>Account management:</strong> provisioning/deprovisioning, service accounts, time-bound access</li>" +
+             "<li><strong>Password policy:</strong> length, complexity, lockout, rotation vs usability</li>" +
+             "</ul>",
+    info: "<strong>Authentication Factors</strong><br>" +
+          "Know – Something you know (password, PIN).<br>" +
+          "Have – Something you have (token, smart card).<br>" +
+          "Are – Something you are (biometrics like fingerprint or face).<br>" +
+          "Where – Your location can be used as a factor.<br>" +
+          "What you do – Behavioral factors like patterns or gestures.<br>" +
+          "MFA – Use multiple factors for stronger security.<br><br>" +
+
+          "<strong>Identity Stores</strong><br>" +
+          "AD/LDAP – Centralized directories for users and groups.<br>" +
+          "SSO – Single Sign-On lets users log in once for multiple services.<br>" +
+          "Federation – Share identities across systems; protocols like SAML, OIDC, OAuth.<br><br>" +
+
+          "<strong>Access Models</strong><br>" +
+          "RBAC – Role-Based Access Control: access based on user role.<br>" +
+          "ABAC – Attribute-Based Access Control: access based on attributes.<br>" +
+          "MAC – Mandatory Access Control: strict policies set by admin.<br>" +
+          "DAC – Discretionary Access Control: owners control access.<br>" +
+          "Least privilege – Give users only the access they need.<br>" +
+          "Need-to-know – Access only what is necessary for tasks.<br><br>" +
+
+          "<strong>Account Management</strong><br>" +
+          "Provisioning/deprovisioning – Creating or removing accounts as needed.<br>" +
+          "Service accounts – Special accounts used by applications.<br>" +
+          "Time-bound access – Access expires after a set time.<br><br>" +
+
+          "<strong>Password Policy</strong><br>" +
+          "Length – Use long passwords for security.<br>" +
+          "Complexity – Include numbers, symbols, upper/lowercase letters.<br>" +
+          "Lockout – Prevent repeated guessing attempts.<br>" +
+          "Rotation vs usability – Balance changing passwords with user convenience."
+},
+                {
+    content: "<h2>Cryptography & PKI</h2>" +
+             "<ul>" +
+             "<li><strong>Symmetric:</strong> one shared key; fast; bulk data (AES)</li>" +
+             "<li><strong>Asymmetric:</strong> key pairs; key exchange, signatures, certificates (RSA/ECC)</li>" +
+             "<li><strong>Hashing:</strong> one-way; integrity; add salt to protect vs rainbow tables</li>" +
+             "<li><strong>PKI:</strong> CAs, roots/intermediates, CRLs, OCSP; key usage (encryption vs signing)</li>" +
+             "<li><strong>TLS:</strong> handshake, certificate validation, key exchange, session keys</li>" +
+             "<li><strong>Data protection:</strong> disk/database encryption, tokenization, TPM/HSM key storage</li>" +
+             "</ul>",
+    info: "<strong>Symmetric Encryption</strong><br>" +
+          "Uses one shared key for encrypting and decrypting data.<br>" +
+          "Fast and efficient for encrypting large amounts of data (AES is common).<br><br>" +
+
+          "<strong>Asymmetric Encryption</strong><br>" +
+          "Uses key pairs: public key to encrypt, private key to decrypt.<br>" +
+          "Used for secure key exchange, digital signatures, and certificates (RSA/ECC).<br><br>" +
+
+          "<strong>Hashing</strong><br>" +
+          "One-way function: converts data into a fixed hash value.<br>" +
+          "Ensures integrity – you can tell if data changed.<br>" +
+          "Add salt to hashes to prevent attacks like rainbow tables.<br><br>" +
+
+          "<strong>PKI (Public Key Infrastructure)</strong><br>" +
+          "CAs – Certificate Authorities issue digital certificates.<br>" +
+          "Roots/Intermediates – Hierarchy of trust for certificates.<br>" +
+          "CRLs & OCSP – Check if certificates are revoked.<br>" +
+          "Key usage – Keys may be used for encryption or signing.<br><br>" +
+
+          "<strong>TLS (Transport Layer Security)</strong><br>" +
+          "Handshake – Establish secure connection.<br>" +
+          "Certificate validation – Ensure the server is trusted.<br>" +
+          "Key exchange – Share session keys securely.<br>" +
+          "Session keys – Symmetric keys used during the session.<br><br>" +
+
+          "<strong>Data Protection</strong><br>" +
+          "Disk/Database encryption – Protect stored data.<br>" +
+          "Tokenization – Replace sensitive data with tokens.<br>" +
+          "TPM/HSM – Hardware modules to securely store keys."
+},
+                {
+    content: "<h2>Security Ops & Incident Response</h2>" +
+             "<ul>" +
+             "<li><strong>Monitoring:</strong> logs, SIEM, baselines, anomaly detection</li>" +
+             "<li><strong>Incident Response (IR) steps:</strong> Preparation → Identification → Containment → Eradication → Recovery → Lessons Learned</li>" +
+             "<li><strong>Evidence:</strong> chain of custody, imaging, log preservation, time synchronization</li>" +
+             "<li><strong>Vulnerability Management:</strong> scanning, prioritization, patching, verification</li>" +
+             "<li><strong>Change Management:</strong> requests, approvals, testing, backout, documentation</li>" +
+             "<li><strong>Backups:</strong> full/incremental/differential; 3-2-1 rule; test restores</li>" +
+             "</ul>",
+    info: "<strong>Monitoring</strong><br>" +
+          "Logs – Keep track of system and network activity.<br>" +
+          "SIEM – Security Information and Event Management collects and analyzes logs.<br>" +
+          "Baselines – Know what normal activity looks like.<br>" +
+          "Anomaly detection – Spot unusual activity that may indicate problems.<br><br>" +
+
+          "<strong>Incident Response (IR) Steps</strong><br>" +
+          "Preparation – Get ready before incidents happen.<br>" +
+          "Identification – Detect and confirm an incident.<br>" +
+          "Containment – Stop the incident from spreading.<br>" +
+          "Eradication – Remove the cause of the incident.<br>" +
+          "Recovery – Restore systems to normal operation.<br>" +
+          "Lessons Learned – Analyze what happened and improve.<br><br>" +
+
+          "<strong>Evidence</strong><br>" +
+          "Chain of custody – Track who handled evidence.<br>" +
+          "Imaging – Make exact copies of drives for analysis.<br>" +
+          "Log preservation – Keep logs intact for investigations.<br>" +
+          "Time synchronization – Ensure timestamps are accurate.<br><br>" +
+
+          "<strong>Vulnerability Management</strong><br>" +
+          "Scanning – Look for weaknesses in systems.<br>" +
+          "Prioritization – Decide which vulnerabilities to fix first.<br>" +
+          "Patching – Apply updates to fix vulnerabilities.<br>" +
+          "Verification – Confirm the fixes worked.<br><br>" +
+
+          "<strong>Change Management</strong><br>" +
+          "Requests – Ask for changes to systems.<br>" +
+          "Approvals – Get proper permission before changes.<br>" +
+          "Testing – Make sure changes work safely.<br>" +
+          "Backout – Plan to undo changes if problems occur.<br>" +
+          "Documentation – Keep a record of all changes.<br><br>" +
+
+          "<strong>Backups</strong><br>" +
+          "Full – Everything is backed up.<br>" +
+          "Incremental – Only changes since last backup.<br>" +
+          "Differential – All changes since last full backup.<br>" +
+          "3-2-1 Rule – 3 copies, 2 types of media, 1 offsite.<br>" +
+          "Test restores – Ensure backups actually work."
+},
+                {
+    content: "<h2>Governance, Risk, & Compliance</h2>" +
+             "<ul>" +
+             "<li><strong>Policies:</strong> AUP, onboarding/offboarding, classification & handling, Incident Response, BCP/DRP</li>" +
+             "<li><strong>Risk:</strong> likelihood × impact; risk register; accept/avoid/transfer/mitigate</li>" +
+             "<li><strong>Assessments:</strong> qualitative vs quantitative, gap analysis, audits, table-top exercises</li>" +
+             "<li><strong>Legal/Compliance:</strong> privacy laws, industry standards, contractual duties</li>" +
+             "<li><strong>Awareness & Training:</strong> phishing simulations, role-based training, continuous education</li>" +
+             "</ul>",
+    info: "<strong>Policies</strong><br>" +
+          "AUP – Acceptable Use Policy: rules for using company resources.<br>" +
+          "Onboarding/Offboarding – Procedures for adding/removing employees.<br>" +
+          "Classification & Handling – How to label and protect sensitive info.<br>" +
+          "Incident Response (IR) – Steps to handle security incidents.<br>" +
+          "BCP/DRP – Business Continuity & Disaster Recovery Plans.<br><br>" +
+
+          "<strong>Risk</strong><br>" +
+          "Likelihood × Impact – Determine how likely and severe a risk is.<br>" +
+          "Risk register – Record of all identified risks.<br>" +
+          "Accept/Avoid/Transfer/Mitigate – Options for handling risks.<br><br>" +
+
+          "<strong>Assessments</strong><br>" +
+          "Qualitative vs Quantitative – Descriptions vs numbers.<br>" +
+          "Gap analysis – Compare current state vs desired state.<br>" +
+          "Audits – Formal checks of processes and controls.<br>" +
+          "Table-top exercises – Practice scenarios to test response.<br><br>" +
+
+          "<strong>Legal/Compliance</strong><br>" +
+          "Privacy laws – Protect personal data (e.g., GDPR, HIPAA).<br>" +
+          "Industry standards – Best practices (e.g., ISO, NIST).<br>" +
+          "Contractual duties – Security obligations in agreements.<br><br>" +
+
+          "<strong>Awareness & Training</strong><br>" +
+          "Phishing simulations – Test employees with fake attacks.<br>" +
+          "Role-based training – Teach security relevant to a job.<br>" +
+          "Continuous education – Keep skills up to date."
 },
 
 
