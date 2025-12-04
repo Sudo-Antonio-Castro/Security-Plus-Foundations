@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Slide Viewer</title>
-
+<title>Security+ Slides</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -17,8 +16,8 @@
         padding: 40px;
         margin-bottom: 20px;
         min-height: 200px;
-        font-size: 1.4em;
-        text-align: center;
+        font-size: 1.2em;
+        text-align: left;
         background: #f9f9f9;
     }
 
@@ -26,6 +25,7 @@
         padding: 20px;
         background: #eef7ff;
         border-left: 4px solid #4a90e2;
+        white-space: pre-wrap;
     }
 
     .buttons {
@@ -35,10 +35,9 @@
     }
 </style>
 </head>
-
 <body>
 
-<h1>Study Slides</h1>
+<h1>Security+ Study Slides</h1>
 
 <div id="slide"></div>
 <div id="info"></div>
@@ -51,23 +50,19 @@
 <script>
     const slides = [
         {
-            content: "CompTIA Security+ SY0-701",
-            info: "Compact Study"
+            content: "<h2>Core Security Concepts</h2>",
+            info: "Welcome! This deck covers essential Security+ concepts."
         },
         {
-            content: "Core Security Concepts
-               CIA: Confidentiality, Integrity, Availability
-AAA: Identification(Prerequisite), Authentication, Authorization, Accounting
-Control types: Technical, Operational, Managerial
-Control function: Preventive, Detective, Corrective, Deterrent, Compensating
-Frameworks & baselines (NIST, ISO); policies, standards, procedures
-Zero trust: Never trust, always verify; continuous validation
- ",
-            info: "Explain the concept in detail here so students can study it."
-        },
-        {
-            content: "Slide 3 — Example Problem",
-            info: "Place step-by-step explanations or answers here."
+            content: "<ul>" +
+                     "<li><strong>CIA:</strong> Confidentiality, Integrity, Availability</li>" +
+                     "<li><strong>AAA:</strong> Identification (Prerequisite), Authentication, Authorization, Accounting</li>" +
+                     "<li><strong>Control types:</strong> Technical, Operational, Managerial</li>" +
+                     "<li><strong>Control function:</strong> Preventive, Detective, Corrective, Deterrent, Compensating</li>" +
+                     "<li><strong>Frameworks & baselines:</strong> NIST, ISO; policies, standards, procedures</li>" +
+                     "<li><strong>Zero trust:</strong> Never trust, always verify; continuous validation</li>" +
+                     "</ul>",
+            info: "Each of these concepts is crucial for Security+ exam preparation."
         }
     ];
 
